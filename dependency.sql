@@ -11,7 +11,7 @@ begin
   return query
     select pg_describe_object(class_id, obj_id, obj_subid) || ' ('|| dep_type|| ')'
     where  dep_type = 'n'
-      and  pg_describe_object(class_id, obj_id, obj_subid) like '%etrs_data.%';
+      and  pg_describe_object(class_id, obj_id, obj_subid) like '%raja_data.%';
   --
   for r in
     select classid, objid, objsubid, deptype
